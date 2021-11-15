@@ -32,6 +32,8 @@ class Snake():
                                                                         (20 + (i + 1) * self.size),
                                                                         fill = self.field_color))
 
+        self.snake_init()
+
         self.root.bind('<w>', lambda e: self.change_direction(1, 0))
         self.root.bind('<s>', lambda e: self.change_direction(-1, 0))
         self.root.bind('<a>', lambda e: self.change_direction(0, -1))
@@ -102,4 +104,3 @@ class Snake():
 
 
 c = Snake(30, 30, 20, "white", "blue", "green")
-c.snake_restart()
